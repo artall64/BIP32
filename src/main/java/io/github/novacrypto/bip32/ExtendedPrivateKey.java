@@ -168,6 +168,10 @@ public final class ExtendedPrivateKey implements
         return cKDpriv(index).neuter();
     }
 
+    public byte[] GetPrivateKeyBytes(){
+        return hdKey.getKey();
+    }
+
     public ExtendedPublicKey neuter() {
         return ExtendedPublicKey.from(hdKey);
     }

@@ -142,6 +142,10 @@ public final class ExtendedPublicKey implements
         return encodeAddress(hdKey.getNetwork().p2pkhVersion(), hdKey.getKey());
     }
 
+    public byte[] getPublicKeyBytes(){
+        return hdKey.getKey();
+    }
+
     public String p2shAddress() {
         final byte[] script = new byte[22];
         script[1] = (byte) 20;
